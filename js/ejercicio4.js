@@ -56,14 +56,15 @@ function funcion1(longitud, caracteres) {
         let repite = false;
 
         for(let j=0;j<straleatoria.length;j++)
-            if(aleatorio === straleatoria[j])
+            if(aleatorio.toLowerCase() === straleatoria[j].toLowerCase())
                 repite = true;
         for(let j=0;j<caracteres.length;j++)
-            if(aleatorio === caracteres[j])
+            if(aleatorio.toLowerCase() === caracteres[j].toLowerCase())
                 repite = true;
             
         if(!repite)
-            straleatoria[i]=aleatorio;
+            straleatoria.push(aleatorio);
+        else i--;
     }
 
     return straleatoria;
